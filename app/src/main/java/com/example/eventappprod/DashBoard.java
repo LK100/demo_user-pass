@@ -14,9 +14,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class DashBoard extends AppCompatActivity {
     //https://www.youtube.com/watch?v=18VcnYN5_LM
     //Event Feed String Arrays
+    // NOTE revelle is entered twice because the create event button takes up the first card space
     String eventNames[];
     String eventDescriptions[];
-    int images[] = {R.drawable.revelle, R.drawable.muir, R.drawable.tmc, R.drawable.warren, R.drawable.erc, R.drawable.sixth, R.drawable.samoyed, R.drawable.khosla};
+    int images[] = {R.drawable.revelle, R.drawable.revelle, R.drawable.muir, R.drawable.tmc, R.drawable.warren, R.drawable.erc, R.drawable.sixth, R.drawable.samoyed, R.drawable.khosla};
 
     //Recycler View Needed for Event Feed
     RecyclerView recyclerView;
