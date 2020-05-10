@@ -22,6 +22,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -30,6 +32,9 @@ import java.util.Map;
 
 public class Register extends AppCompatActivity {
     public static final String TAG = "TAG";
+    FirebaseDatabase database;
+    DatabaseReference ref;
+
     EditText mFullName,mEmail,mPassword, confirmPassword;
     Button mRegisterBtn;
     TextView mLoginBtn;
@@ -55,6 +60,8 @@ public class Register extends AppCompatActivity {
         fStore = FirebaseFirestore.getInstance();
         progressBar = findViewById(R.id.progressBar);
 
+        database = FirebaseDatabase.getInstance();
+        ref = database.getReference("USER");
 
         mRegisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,6 +117,9 @@ public class Register extends AppCompatActivity {
                                         Toast.makeText(Register.this, "Verification Email Has been Sent.", Toast.LENGTH_SHORT).show();
                                         mEmail.setText("");
                                         mPassword.setText("");
+
+
+
                                     } else {
                                         Log.e(TAG, "Email hasn't been verified. EmailVerification", task.getException());
                                     }
