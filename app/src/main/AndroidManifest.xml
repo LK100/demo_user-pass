@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".CreateEventPage2"></activity>
         <activity
-            android:name=".CreateEventActivity"
+            android:name=".CreateEventPage1"
             android:label="Return to Dashboard"
-            android:parentActivityName=".Profile"/>
+            android:parentActivityName=".Profile" />
         <activity android:name=".Register" />
         <activity
             android:name=".ArchivedEventsActivity"

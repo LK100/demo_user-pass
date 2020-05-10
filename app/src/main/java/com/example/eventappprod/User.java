@@ -8,9 +8,6 @@ public class User {
     private String College;
     private String Group;
 
-    public User() {
-
-    }
 
     public User(String name, String email, String pass) {
         UserName = name;

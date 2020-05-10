@@ -1,6 +1,7 @@
 package com.example.eventappprod;
 
 public class Event {
+    private String ID;
     private String Name;
     private String Date;
     private String Location;
@@ -8,20 +9,30 @@ public class Event {
     private String EndTime;
     private String Tag;
 
+    //private String Image;
+    private String Description;
+
+
 
 
     public Event() {
 
     }
 
-    public Event(String name, String date, String loca, String stime, String etime, String tag) {
+    public Event(String id,String name, String date, String loca, String stime, String etime, String tag, String des) {
+        ID = id;
         Name = name;
         Date = date;
         Location = loca;
         Tag =tag;
         StartTime =stime;
         EndTime = etime;
+        Description = des;
     }
+    public String getId(){
+        return ID;
+    }
+    public void setId(String id){ ID = id; }
 
     public String getName(){
         return Name;
@@ -61,6 +72,13 @@ public class Event {
     }
     public void setTag(String t){
         Tag =t;
+    }
+
+    public String getDescription(){
+        return Description;
+    }
+    public void setDescription(String d){
+        Description =d;
     }
 
 }

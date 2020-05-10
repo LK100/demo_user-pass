@@ -56,7 +56,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             holder.createEvent.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(context, CreateEventActivity.class);
+                    Intent intent = new Intent(context, CreateEventPage1.class);
                     context.startActivity(intent);
                 }
             });
